@@ -15,7 +15,6 @@ async function logger({ event, resolve }) {
 // runs second
 function authorize({ event, resolve }) {
 	event.locals.user = auth();
-	event.locals.this_is_just_a_test = 'test';
 	event.cookies.set('test', 'test', {
 		path: '/'
 	});
