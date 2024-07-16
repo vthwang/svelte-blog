@@ -1,6 +1,4 @@
 export async function load({ fetch, params, setHeaders, locals }) {
-	console.log(locals)
-
 	const res = await fetch(`https://syntax.fm/api/shows/${params.num}`);
 	const data = await res.json();
 
