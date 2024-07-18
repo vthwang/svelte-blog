@@ -1,5 +1,9 @@
 import { error, redirect } from '@sveltejs/kit';
 
+import { LUT_API } from '$env/static/private';
+
+console.log(LUT_API);
+
 export async function load({ fetch, params, setHeaders, locals }) {
 	console.log(locals.user);
 	if (!locals?.user?.id) {
