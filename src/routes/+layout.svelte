@@ -44,7 +44,7 @@
 
 <Footer />
 
-<style>
+<style lang="postcss">
 	main {
 		display: grid;
 		grid-template-columns: 300px 1fr;
