@@ -20,7 +20,7 @@
 
 		// See if it was success,
 		// if success, reload all loaded data
-		if (result.type === 'success')  {
+		if (result.type === 'success') {
 			// Reloads all data
 			await invalidateAll();
 		}
@@ -54,10 +54,7 @@
 		action="/contact?/email"
 		method="POST"
 	> -->
-	<form
-		on:submit|preventDefault={handleForm}
-		action="/contact?/email"
-	>
+	<form on:submit|preventDefault={handleForm} action="/contact?/email">
 		<!--Action = route -> ?/ + action name -->
 		<label for="name">
 			Name: <input type="text" name="name" id="name" required />

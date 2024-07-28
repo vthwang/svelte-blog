@@ -1,4 +1,12 @@
 <script>
+	// lifecycle, afterNavigate, beforeNavigate
+	// disableScrollHandling - SvelteKit's built in scroll handling
+	// goto => programmatically routing
+	// invalidate -> load functions on active page re-run
+	// invalidateAll -> causes all load functions to re-run
+	// preloadCode -> load js code for given routes
+	// preloadData -> load data from load functions for given routes
+	import { goto } from '$app/navigation';
 	import { PUBLIC_LUT_PUB_KEY } from '$env/static/public';
 	console.log(PUBLIC_LUT_PUB_KEY);
 
@@ -26,6 +34,7 @@
 
 <main>
 	<div class="main">
+		<button on:click={() => goto('/contact')}>Change Page</button>
 		<slot />
 	</div>
 	<aside>
